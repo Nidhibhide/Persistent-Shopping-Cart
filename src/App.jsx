@@ -1,13 +1,15 @@
-
+import Header from "./pages/Header";
+import ProductList from "./pages/ProductList";
+import { CartProvider } from "./pages/CartContent";
 function App() {
-
-
   return (
     <>
-    <h1 className="text-white bg-blue-200 font-medium">Welcome to project</h1>
-        
+      <CartProvider>
+        <Header />
+        <ProductList />
+      </CartProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
